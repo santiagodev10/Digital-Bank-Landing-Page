@@ -21,4 +21,9 @@ html {
     --Light-Grayish-Blue: hsl(220, 16%, 96%);
     --Very-Light-Gray: hsl(0, 0%, 98%);
     --White: hsl(0, 0%, 100%);
+    /*Font sizes*/
+    --big: 1.8rem;
+    --medium: 1.6rem;
+    --regular: 1.4rem;
+    --small: 1.2rem;
 }
