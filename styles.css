@@ -23,9 +23,10 @@ html {
     --White: hsl(0, 0%, 100%);
     /*Font sizes*/
     --big: 5rem;
-    --medium: 2rem;
-    --regular: 1.6rem;
-    --small: 1.2rem;
+    --medium: 3.6rem;
+    --regular: 2.6rem;
+    --small: 1.4rem;
+    --very-small: 1rem;
 }
 
 body {
@@ -79,6 +80,7 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 0px 0px 100px 0px;
 }
 
 .next-generation-banking--mockups-image {
@@ -116,7 +118,7 @@ header {
 }
 
 .next-generation-banking--section-description p {
-    font-size: clamp(1.4rem, 4vw, var(--medium));
+    font-size: clamp(1.4rem, 4vw, var(--small));
     line-height: 24px;
     color: var(--Grayish-Blue);
     margin-top: 1rem;
@@ -125,7 +127,7 @@ header {
 .next-generation-banking--section-description button {
     margin-top: 2rem;
     padding: 1.4rem 3rem;
-    font-size: clamp(1.4rem, var(--regular), 1.8rem);
+    font-size: clamp(1.4rem, 4vw, var(--small));
     font-weight: 700;
     color: var(--White);
     background: linear-gradient(
@@ -140,4 +142,57 @@ header {
 
 .temporary-size {
     width: 100px;
+}
+
+.why-choose-easybank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 10px 50px;
+    background-color: var(--Light-Grayish-Blue);
+}
+
+.why-choose-easybank h2 {
+    font-size: clamp(2.8rem, 8vw, var(--medium));
+    font-weight: 400;
+    color: var(--Dark-Blue);
+}
+
+.why-choose-easybank--paragraph {
+    font-size: clamp(1.4rem, 4vw, var(--small));
+    line-height: 24px;
+    color: var(--Grayish-Blue);
+    margin-top: 1rem;
+    padding: 0px 20px;
+}
+
+.why-choose-easybank--benefits-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 600px;
+    margin-top: 4rem;
+}
+
+.benefits-list--easybanks-benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 210px;
+    margin: 10px;
+}
+
+.benefits-list--easybanks-benefits h3 {
+    font-size: clamp(2rem, 5vw, var(--regular));
+    font-weight: 400;
+    color: var(--Dark-Blue);
+}
+
+.benefits-list--easybanks-benefits p {
+    font-size: clamp(1.4rem, 4vw, var(--small));
+    line-height: 24px;
+    color: var(--Grayish-Blue);
 }
