@@ -220,7 +220,6 @@ header {
 
 .cards-container--card {
     display: grid;
-    /* grid-template-columns: repeat(1, 1fr); */
     grid-template-rows: repeat(2, 1fr);
     max-width: 375px;
     border-radius: 10px;
@@ -264,5 +263,88 @@ header {
     font-size: clamp(1.2rem, 4vw, var(--small));
     text-align: left;
     line-height: 15px;
+    color: var(--Grayish-Blue);
+}
+
+/*Footer*/
+
+footer {
+    min-height: 420px;
+    padding: 20px;
+    background-color: var(--Dark-Blue);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    min-height: inherit;
+}
+
+.footer-container--logo-social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* .logo-social-media--logo-container {
+    width: 100%;
+    text-align: center;
+}
+
+.logo-social-media--logo-container img {
+    width: 100%;
+} */
+
+.logo-social-media--social-media-list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-footer--nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-footer--nav-links li {
+    font-size: clamp(1.4rem, 4vw, var(--small));
+    color: var(--White);
+}
+
+.nav-footer--nav-links li a {
+    color: var(--White);
+}
+
+.footer-container--request-invite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-container--request-invite button {
+    padding: 1.4rem 3rem;
+    font-size: clamp(1.4rem, 4vw, var(--small));
+    font-weight: 700;
+    color: var(--White);
+    background: linear-gradient(
+        90deg,
+        var(--Lime-Green),
+        var(--Bright-Cyan)
+    );
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-container--request-invite p {
+    font-size: clamp(1.4rem, 4vw, var(--small));
     color: var(--Grayish-Blue);
 }
