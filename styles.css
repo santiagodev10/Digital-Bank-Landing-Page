@@ -39,6 +39,7 @@ body {
 /*Header*/
 
 header {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,8 +47,11 @@ header {
     background-color: var(--White);
 }
 
-.nav-links {
-    display: none;
+.inactive {
+    /* display: none; */
+    opacity: 0;
+    position: absolute;
+    visibility: hidden; 
 }
 
 .ham-menu {
@@ -63,6 +67,54 @@ header {
     width: 100%;
     height: 0.1rem;
     background-color: var(--Dark-Blue);
+    transition: 0.5s;
+}
+
+.change .bar-1 {
+    transform: translate(0, 5px) rotate(-45deg);
+}
+
+.change .bar-2 {
+    opacity: 0;
+}
+
+.change .bar-3 {
+    transform: translate(0, -5px) rotate(45deg);
+}
+
+.nav-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* .nav-header--nav-links {
+    transition: opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
+} */
+
+.nav-links_show {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.nav-header--nav-links li {
+    font-size: clamp(1.4rem, 4vw, var(--small));
+}
+.nav-header--nav-links li a {
+    color: var(--Dark-Blue);
 }
 
 /*Main*/
@@ -119,6 +171,7 @@ header {
 }
 
 .next-generation-banking--section-description p {
+    max-width: 450px;
     font-size: clamp(1.4rem, 4vw, var(--small));
     line-height: 24px;
     color: var(--Grayish-Blue);
@@ -158,6 +211,7 @@ header {
 }
 
 .why-choose-easybank--paragraph {
+    max-width: 420px;
     font-size: clamp(1.4rem, 4vw, var(--small));
     line-height: 24px;
     color: var(--Grayish-Blue);
@@ -178,6 +232,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 300px;
     min-height: 210px;
     margin: 10px;
 }
@@ -348,3 +403,5 @@ footer {
     font-size: clamp(1.4rem, 4vw, var(--small));
     color: var(--Grayish-Blue);
 }
+
+/*Media Queries*/
