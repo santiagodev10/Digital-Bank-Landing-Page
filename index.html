@@ -12,23 +12,23 @@
     <title>Digital bank landing page</title>
 </head>
 <body>
-    <div class="nav-header--backdrop remove"></div>
+    <div class="nav-header--backdrop remove" aria-hidden="true"></div>
     <header>
         <figure class="logo">
             <img src="./images/logo.svg" alt="logo">
         </figure>
-        <nav class="nav-header">
-            <div class="ham-menu">
+        <nav class="nav-header" aria-label="Main Navigation">
+            <div class="ham-menu" tabindex="1">
                 <div class="ham-menu--bar bar-1"></div>
                 <div class="ham-menu--bar bar-2"></div>
                 <div class="ham-menu--bar bar-3"></div>
             </div>
-            <ul class="nav-header--nav-links inactive">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Blogs</a></li>
-                <li><a href="">Careers</a></li>
+            <ul class="nav-header--nav-links inactive" role="menu">
+                <li><a href="" role="menuitem">Home</a></li>
+                <li><a href="" role="menuitem">About</a></li>
+                <li><a href="" role="menuitem">Contact</a></li>
+                <li><a href="" role="menuitem">Blogs</a></li>
+                <li><a href="" role="menuitem">Careers</a></li>
             </ul>
         </nav>
     </header>
@@ -83,7 +83,7 @@
 
         <section class="latest-articles">
             <h2>Latest Articles</h2>
-            <div class="latest-articles--cards-container">
+            <div class="latest-articles--cards-container" role="list">
                 <article class="cards-container--card first-card">
 
                     <div class="card--image-container">
@@ -147,7 +147,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer aria-label="Site Footer">
         <div class="footer-container">
             <div class="footer-container--logo-social-media">
                 <figure class="logo-social-media--logo-container">
