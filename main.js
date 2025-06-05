@@ -47,12 +47,17 @@ backdrop.addEventListener('click', () => {
 });
 
 // Scroll to top functionality
+let scrollToTopHandler; 
+
 const scrollToTop = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             console.log('You are at the top of the page');
             const scrollToTopButton = document.querySelector('.scroll-to-top');
+            
             if (scrollToTopButton) {
+                // Remove the event listener before removing the button
+                scrollToTopButton.removeEventListener('click', scrollToTopHandler);
                 scrollToTopButton.remove();
             }
         } else {
@@ -65,12 +70,16 @@ const scrollToTop = new IntersectionObserver((entries) => {
             scrollToTopButton.appendChild(buttonImage);
             scrollToTopButton.classList.add('scroll-to-top');
             scrollToTopButton.setAttribute('aria-label', 'Scroll to top');
-            scrollToTopButton.addEventListener('click', () => {
+
+            // Store the event handler in a variable so it can be removed later
+            scrollToTopHandler = () => { // Assign the function to scrollToTopHandler
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
                 });
-            });
+            };
+
+            scrollToTopButton.addEventListener('click', scrollToTopHandler);
             main.appendChild(scrollToTopButton);
             handleKeyboardAccess();
         }
