@@ -64,7 +64,7 @@ const scrollToTop = new IntersectionObserver((entries) => {
             console.log('You are not at the top of the page');
             const scrollToTopButton = document.createElement('button');
             const buttonImage = document.createElement('img');
-            buttonImage.src = './images/arrow-up.png';
+            buttonImage.src = '../src/images/arrow-up.png';
             buttonImage.alt = 'Scroll to top';
             buttonImage.classList.add('scroll-to-top-image');
             scrollToTopButton.appendChild(buttonImage);
