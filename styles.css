@@ -22,6 +22,7 @@ html {
     --Very-Light-Gray: hsl(0, 0%, 98%);
     --White: hsl(0, 0%, 100%);
     /*Font sizes*/
+    --extra-big: 6rem;
     --big: 5rem;
     --medium: 3.6rem;
     --regular: 2.6rem;
@@ -31,8 +32,6 @@ html {
 }
 
 body {
-    /* display: grid;
-    grid-template-rows: auto 1fr auto; */
     min-height: 100dvh;
 }
 
@@ -42,7 +41,7 @@ header {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     /* padding: 2rem 2rem; */
     background-color: var(--White);
     z-index: 2;
@@ -444,6 +443,8 @@ footer {
 /*Media Queries*/
 
 @media (min-width: 900px) {
+    /*HEADER*/
+
     .ham-menu {
         display: none;
     }
@@ -465,6 +466,8 @@ footer {
     }
 
     .nav-header--nav-links li a {
+        height: 100%;
+        align-content: center;
         color: var(--Grayish-Blue);
     }
 
@@ -493,5 +496,61 @@ footer {
 
     .header-button {
         display: block;
+    }
+
+    /*MAIN*/
+    main {
+        overflow-x: hidden;
+    }
+
+    /*Next Generation Banking*/
+
+    .next-generation-banking {
+        flex-direction: row-reverse;
+        padding: 0;
+    }
+    
+    .next-generation-banking--mockups-image {
+        height: 100vh;
+        max-height: 60rem;
+        position: relative;
+        background-image: url(./images/bg-intro-desktop.svg);
+        background-size: auto;
+        background-position: -7rem -20rem;
+        margin-top: 0;
+        z-index: 0;
+    }
+
+    .next-generation-banking--mockups-image-container {
+        width: 50vw;
+        max-width: 74rem;
+        min-width: 60rem;
+        position: absolute;
+        left: 20%;
+        top: -10rem;
+        padding: 0;
+    }
+
+    .next-generation-banking--section-description {
+        width: 80%;
+        align-items: flex-start;
+        gap: 1.6rem; 
+        text-align: left;
+        padding: 1.6rem 1.6rem 1.6rem 10rem;
+    }
+
+    .next-generation-banking--section-description h1 {
+        font-size: clamp(3.2rem, 4vw, var(--extra-big));
+    }
+
+    .next-generation-banking--section-description p {
+        margin-top: 0;
+        font-size: clamp(var(--small), 1.4vw, 1.8rem);
+    }
+
+    /*Why Choose Easybank*/
+    .why-choose-easybank {
+        position: relative;
+        z-index: -2;
     }
 }
