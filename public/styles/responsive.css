@@ -65,7 +65,7 @@
 
     .next-generation-banking {
         flex-direction: row-reverse;
-        padding: 0;
+        padding: 0 0 0 10rem;
     }
     
     .next-generation-banking--mockups-image {
@@ -94,7 +94,6 @@
         align-items: flex-start;
         gap: 1.6rem; 
         text-align: left;
-        padding: 1.6rem 1.6rem 1.6rem 10rem;
     }
 
     .next-generation-banking--section-description h1 {
@@ -107,9 +106,48 @@
     }
 
     /*Why Choose Easybank*/
-    
+
     .why-choose-easybank {
+        align-items: flex-start;
         position: relative;
+        padding: 5rem 10rem 5rem 10rem;
         z-index: -2;
+    }
+
+    .why-choose-easybank__word-breaker {
+        display: none;
+    }
+
+    .why-choose-easybank--paragraph {
+        max-width: 50rem;
+        padding: 0;
+        text-align: left;
+        font-size: clamp(var(--small), 1.4vw, 1.8rem);
+    }
+
+    .why-choose-easybank h2 {
+        font-size: clamp(2.8rem, 3vw, var(--medium));
+    }
+
+    .why-choose-easybank--benefits-list {
+        flex-direction: row;
+        gap: 1rem;
+        min-height: 35rem;
+        margin-top: 0;
+    }
+
+    .benefits-list--easybanks-benefits {
+        width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+
+    .benefits-list--easybanks-benefits h3 {
+        font-size: clamp(1.6rem, 2vw, var(--regular));
+    }
+
+    .benefits-list--easybanks-benefits p {
+        height: 8vh;
+        font-size: clamp(var(--small), 1.4vw, 1.8rem);
     }
 }
