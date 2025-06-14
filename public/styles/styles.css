@@ -304,7 +304,7 @@ header {
 
 .description-container--article-title {
     font-size: clamp(1.6rem, 4vw, var(--normal));
-    font-weight: 400;
+    font-weight: 300;
     text-align: left;
     color: var(--Dark-Blue);
 }
@@ -350,7 +350,16 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 1rem;
+}
+
+.nav-links--column {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
 }
 
 .nav-footer--nav-links li {
