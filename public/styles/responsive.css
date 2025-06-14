@@ -97,7 +97,7 @@
     }
 
     .next-generation-banking--section-description h1 {
-        font-size: clamp(3.2rem, 4vw, var(--extra-big));
+        font-size: clamp(3.2rem, 4vw, var(--extra-large));
     }
 
     .next-generation-banking--section-description p {
@@ -170,6 +170,7 @@
     .cards-container--card {
         height: clamp(30rem, 35vw, 50rem);
         max-height: clamp(48rem, 50vw, 60rem);
+        max-width: 33rem;
         cursor: pointer;
     }
 

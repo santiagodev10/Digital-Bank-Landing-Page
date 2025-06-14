@@ -22,8 +22,8 @@ html {
     --Very-Light-Gray: hsl(0, 0%, 98%);
     --White: hsl(0, 0%, 100%);
     /*Font sizes*/
-    --extra-big: 6rem;
-    --big: 5rem;
+    --extra-large: 6rem;
+    --large: 5rem;
     --medium: 3.6rem;
     --regular: 2.6rem;
     --normal: 2rem;
@@ -171,7 +171,7 @@ header {
 }
 
 .next-generation-banking--section-description h1 {
-    font-size: clamp(3.2rem, 9vw, var(--big));
+    font-size: clamp(3.2rem, 9vw, var(--large));
     font-weight: 400;
     color: var(--Dark-Blue);
 }
