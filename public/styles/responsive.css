@@ -150,4 +150,54 @@
         height: 8vh;
         font-size: clamp(var(--small), 1.4vw, 1.8rem);
     }
+
+    /* Latest Articles */
+
+    .latest-articles {
+        padding: 5rem 10rem 5rem 10rem;
+    }
+
+    .latest-articles h2 {
+        font-size: clamp(2.8rem, 3vw, var(--medium));
+        text-align: left;
+    }
+
+    .latest-articles--cards-container {
+        flex-direction: row;
+        min-height: 40rem;
+    }
+
+    .cards-container--card {
+        height: clamp(30rem, 35vw, 50rem);
+        max-height: clamp(48rem, 50vw, 60rem);
+        cursor: pointer;
+    }
+
+    .cards-container--card:hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card--description-container {
+        height: clamp(18rem, 20vw, 20rem);
+        padding: 10px 25px 20px 25px;
+    }
+
+    .image-container--image {
+        height: 100%;
+        max-width: 33rem;
+    }
+
+    .description-container--article-author {
+        font-size: clamp(1rem, 1.2vw, var(--very-small));
+    }
+
+    .description-container--article-title {
+        font-size: clamp(var(--very-small), 1.4vw, var(--normal));
+    }
+
+    .description-container--brief-description {
+        font-size: clamp(var(--extra-small), 1.2vw, 1.4rem);
+        overflow-y: overlay;
+    }
 }
