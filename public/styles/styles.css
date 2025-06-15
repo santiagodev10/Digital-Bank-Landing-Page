@@ -431,6 +431,10 @@ footer {
     opacity: 0.5;
 }
 
+.svg-icon:hover .svg-icon-path {
+    fill: var(--Lime-Green);
+}
+
 /*Utility classes*/
 
 .inactive {

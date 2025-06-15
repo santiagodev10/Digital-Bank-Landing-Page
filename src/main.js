@@ -5,10 +5,7 @@ const domElements = {
     header: document.querySelector('header'),
     main: document.querySelector('main'),
     footer: document.querySelector('footer'),
-    svgIcons: document.querySelectorAll('.svg-icon')
 };
-const hoverColor = 'var(--Lime-Green)';
-const defaultColor = '#FFF';
 
 function toggleMenuClasses() {
     domElements.hamMenu.classList.toggle('change');
@@ -38,20 +35,6 @@ function handleKeyboardAccess() {
         domElements.footer.inert = false;
     }
     //inert attribute is used to block access to interactive elements via keyboard
-}
-
-function handleSvgIconsHover() {
-    domElements.svgIcons.forEach(icon => {
-        icon.addEventListener('mouseover', () => {
-            const svgIconPath = icon.querySelector('.svg-icon-path');
-            svgIconPath.setAttribute('fill', hoverColor);
-        });
-
-        icon.addEventListener('mouseout', () => {
-            const svgIconPath = icon.querySelector('.svg-icon-path');
-            svgIconPath.setAttribute('fill', defaultColor);
-        });
-    });
 }
 
 function closeMenu() {
@@ -111,5 +94,4 @@ domElements.hamMenu.addEventListener('keydown', (event) => {
 
 domElements.backdrop.addEventListener('click', closeMenu);
 
-handleSvgIconsHover();
 scrollToTop.observe(domElements.header);
