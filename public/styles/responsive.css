@@ -65,7 +65,7 @@
 
     .next-generation-banking {
         flex-direction: row-reverse;
-        padding: 0;
+        padding: 0 0 0 10rem;
     }
     
     .next-generation-banking--mockups-image {
@@ -94,11 +94,10 @@
         align-items: flex-start;
         gap: 1.6rem; 
         text-align: left;
-        padding: 1.6rem 1.6rem 1.6rem 10rem;
     }
 
     .next-generation-banking--section-description h1 {
-        font-size: clamp(3.2rem, 4vw, var(--extra-big));
+        font-size: clamp(3.2rem, 4vw, var(--extra-large));
     }
 
     .next-generation-banking--section-description p {
@@ -107,9 +106,141 @@
     }
 
     /*Why Choose Easybank*/
-    
+
     .why-choose-easybank {
+        align-items: flex-start;
         position: relative;
+        padding: 5rem 10rem 5rem 10rem;
         z-index: -2;
+    }
+
+    .why-choose-easybank__word-breaker {
+        display: none;
+    }
+
+    .why-choose-easybank--paragraph {
+        max-width: 50rem;
+        padding: 0;
+        text-align: left;
+        font-size: clamp(var(--small), 1.4vw, 1.8rem);
+    }
+
+    .why-choose-easybank h2 {
+        font-size: clamp(2.8rem, 3vw, var(--medium));
+    }
+
+    .why-choose-easybank--benefits-list {
+        flex-direction: row;
+        gap: 1rem;
+        min-height: 35rem;
+        margin-top: 0;
+    }
+
+    .benefits-list--easybanks-benefits {
+        width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+
+    .benefits-list--easybanks-benefits h3 {
+        font-size: clamp(1.6rem, 2vw, var(--regular));
+    }
+
+    .benefits-list--easybanks-benefits p {
+        height: 8vh;
+        font-size: clamp(var(--small), 1.4vw, 1.8rem);
+    }
+
+    /* Latest Articles */
+
+    .latest-articles {
+        padding: 5rem 10rem 5rem 10rem;
+    }
+
+    .latest-articles h2 {
+        font-size: clamp(2.8rem, 3vw, var(--medium));
+        text-align: left;
+    }
+
+    .latest-articles--cards-container {
+        flex-direction: row;
+        min-height: clamp(40rem, 40vw, 60rem);
+    }
+
+    .cards-container--card {
+        height: clamp(30rem, 35vw, 50rem);
+        max-height: clamp(48rem, 50vw, 60rem);
+        max-width: 33rem;
+        cursor: pointer;
+    }
+
+    .cards-container--card:hover {
+        transform: scale(1.02);
+        transition: transform 0.2s ease-in-out;
+        .description-container--article-title {
+            color: var(--Lime-Green);
+        }
+    }
+
+    .card--description-container {
+        height: clamp(18rem, 20vw, 20rem);
+        padding: 10px 25px 20px 25px;
+    }
+
+    .image-container--image {
+        height: 100%;
+        max-width: 33rem;
+    }
+
+    .description-container--article-author {
+        font-size: clamp(1rem, 1.2vw, var(--very-small));
+    }
+
+    .description-container--article-title {
+        font-size: clamp(var(--very-small), 1.4vw, var(--normal));
+    }
+
+    .description-container--brief-description {
+        font-size: clamp(var(--extra-small), 1.2vw, 1.4rem);
+        overflow-y: overlay;
+    }
+
+    /*FOOTER*/
+
+    footer {
+        min-height: 0;
+    }
+
+    .footer-container {
+        grid-template-rows: none;
+        grid-template-columns: 25% 25% 50%;
+    }
+
+    .footer-container--logo-social-media {
+        height: 100%;
+        justify-content: center;
+    }
+
+    .nav-footer--nav-links {
+        flex-direction: row;
+    }
+
+    .nav-footer--nav-links li {
+        font-size: clamp(var(--extra-small), 1vw, var(--small));
+    }
+
+    .nav-footer--nav-links li:hover {
+        a {
+            color: var(--Lime-Green);
+        }
+    }
+
+    .nav-links--column {
+        align-items: flex-start;
+    }
+
+    .footer-container--request-invite {
+        width: 80%;
+        align-items: flex-end;
     }
 }
