@@ -58,12 +58,17 @@ function createScrollToTopButton() {
     scrollToTopButton.classList.add('scroll-to-top');
     scrollToTopButton.setAttribute('aria-label', 'Scroll to top');
 
-    scrollToTopButton.addEventListener('click', () => {
+    const handleClick = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
-    });
+    };
+
+    scrollToTopButton.addEventListener('click', handleClick);
+
+    // Store the handleClick function on the button element so it can be removed later
+    scrollToTopButton.handleClick = handleClick;
 
     return scrollToTopButton;
 }
@@ -73,6 +78,8 @@ const scrollToTop = new IntersectionObserver((entries) => {
         const scrollToTopButton = document.querySelector('.scroll-to-top');
         if (entry.isIntersecting) {
             if (scrollToTopButton) {
+                // Remove the event listener
+                scrollToTopButton.removeEventListener('click', scrollToTopButton.handleClick);
                 scrollToTopButton.remove();
             }
         } else {
