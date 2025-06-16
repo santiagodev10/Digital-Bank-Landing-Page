@@ -72,7 +72,7 @@
         height: 100vh;
         max-height: 60rem;
         position: relative;
-        background-image: url(../../src/images/bg-intro-desktop.svg);
+        background-image: url(.././src/images/bg-intro-desktop.svg);
         background-size: auto;
         background-position: -7rem -20rem;
         margin-top: 0;
